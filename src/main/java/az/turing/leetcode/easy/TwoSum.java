@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        //Task 1
+
         int[] array = {5, 4, 6, 9};
         System.out.println(Arrays.toString(twoSumWithFor(array, 10)));
         int[] array2 = {1, 10, 7, 4};
@@ -25,7 +27,7 @@ public class TwoSum {
 
     public static int[] twoSumWithMap(int[] array, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < array.length; i++) {//5,4,6,9
+        for (int i = 0; i < array.length; i++) {
             int complement = target - array[i];
             if (map.containsKey(complement)) {
                 return new int[]{map.get(complement), i};
